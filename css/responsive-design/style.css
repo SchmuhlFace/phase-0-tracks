@@ -8,18 +8,32 @@ cite {
   display: block;
   margin-top: 10px;
 }
+section#external-links {
+  float: right;
+  height: 140px; 
+  width: 30%;
+  margin: 1px;
+  padding: 15px;
+  font-size: 10px;
+  display: inline-block; 
+  vertical-align: top;
+
+}
 
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+  position: absolute;
 }
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
 but it's optional! */
+
 img {
   width: 100%;
 }
+
 
 figure {
   margin-left: 0px;
@@ -30,3 +44,30 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+main {
+  max-width: 60%;
+
+}
+
+
+/* When the screen width gets smaller, it turns the background pink! 
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+*/
+
+@media screen and (max-width: 500px) {
+  img {
+    width: 50%;
+  }
+
+@media screen and (max-width: 500px) {
+  body { font-size: 2em; 
+  }
+ 
+  
+
