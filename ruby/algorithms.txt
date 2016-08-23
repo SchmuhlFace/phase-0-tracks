@@ -1,0 +1,29 @@
+*Release 0*
+
+-For each button on the elevator console:
+ - Until you see a button with a G on it:
+    - Keep searching the console for a G.
+    - Don't press any buttons.
+ - If you see a button with a G on it:
+    - Press the button. 
+ -If you want to meet your new owner
+  - Get off the elevator when the doors re-open.
+- Otherwise:
+  - Keep riding the elevator forever.
+
+/* This algorithm assumes the robot got on at the top floor (where he was made, in a top secret lab) and is hoping to return to ground level (where his new owner awaits him ;) */
+
+*Release 1*
+
+-If you are eating chocolate chips:
+  - Eat three chocolate chips.
+  - Say yum after you eat three chocolate chips. 
+- If your face doesn't itch:
+    - Eat three more chocolate chips. 
+    - Say All done after eating the additional three chocolate chips.
+Otherwise:
+  -If your face itches:
+    - Stop eating chocolate chips.
+
+
+    (it's important to note that I am very allergic to chocolate but sometimes, I can have a little bit (depending on the type.))
