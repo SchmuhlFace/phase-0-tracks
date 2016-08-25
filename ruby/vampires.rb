@@ -16,34 +16,13 @@ def vampire_determination_interview(number_employees)
         age = gets.chomp.to_i
 
       puts "In what year were you born?"
-        dob = gets.chomp.to_i
-
-      puts " Silly me, what's the current year?"
-        current_year = gets.chomp.to_i
-
-        if current_year - dob == age
-            age = true
-        else age = false
-
-        end
+        birth_year = gets.chomp.to_i
 
       puts "Would you like some garlic bread from our company cafeteria (yes/no)?"
-        garlic_bread = gets.chomp
-
-        if garlic_bread == "yes"
-          garlic_lover =true
-        else garlic_bread == "no"
-          garlic_lover = false
-        end
+        garlic_lover = gets.chomp
 
       puts "Would you like to enroll in the company's health insurance (yes/no)?"
         insurance = gets.chomp
-
-        if insurance == "yes"
-          life_help = true
-        else insurance = false
-          life_help = false
-        end
 
 #Allergy check
 
@@ -58,15 +37,14 @@ def vampire_determination_interview(number_employees)
 
       if  allergies == "sunshine"
         puts "Probably a vampire."
-      elsif age && (garlic_lover || insurance) == true
+      elsif (2016 - birth_year = age) && (garlic_lover == "yes" || insurance == "yes")
         puts "Probably not a vampire."
-      elsif age && (garlic_lover || insurance) == false
+      elsif (2016 - birth_year != age) && (garlic_lover == "no" || insurance == "no")
         puts "Probably a vampire."
-      elsif age && garlic_lover && insurance == false
-        puts "Almost certainly a vampire.."
+      elsif (2016 - birth_year != age) && (garlic_lover == "no" && insurance == "no")
+        puts "Almost certainly a vampire."
       elsif (name == "Drake Cula") || (name == "Tu Fang") == true
-        puts "Totally a vampire."
-
+        puts "Definitely a vampire."
       else print "Results inconclusive."
 
       end
