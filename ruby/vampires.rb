@@ -2,8 +2,6 @@
 
 puts "How many employees will be processed?"
   number_employees = gets.chomp.to_i
-   gets.chomp.to_i
-
 
 def vampire_determination_interview(number_employees)
   i = number_employees
