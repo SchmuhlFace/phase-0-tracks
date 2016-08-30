@@ -1,6 +1,7 @@
 def method
-  puts "This is a method!"
-  yield ("sweet", "awesome", "rad")
+
+  puts "Why, hello there!"
+  yield("Steve", "Tiahna" , "Dali")
 end
 
-method { |var1, var2, var3| puts "That's a #{var1}, #{var2}, #{var3} method!" }
+method { |name1, name2, name3| puts "great to see you, #{name1} and #{name2} and #{name3}"}
