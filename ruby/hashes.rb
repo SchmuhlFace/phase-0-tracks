@@ -1,4 +1,4 @@
-#Interior DesignEZ Program
+#Interior DesignEZ Program by SchmuhlFace
 
 #Setup methods with questions to retrieve data and store in appropriate and varied values.
 #Store client's responses and print hash.
