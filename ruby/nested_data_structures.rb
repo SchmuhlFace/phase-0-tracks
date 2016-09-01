@@ -1,4 +1,4 @@
-#Bookstore Nested Data Structure
+#Bookstore Nested Data Structure by SchmuhlFace
 
 bookstore = {
   first_floor: {
@@ -15,8 +15,8 @@ bookstore = {
   second_floor: {
     pretty_name: 'Poetry',
     genre_selection: {
-      total_books: 100
-      books_purchased: 10
+      total_books: 1,
+      books_purchased: 100
     },
     bestseller: [
       "Elizabeth Schmuhl",
@@ -24,14 +24,28 @@ bookstore = {
     ]
   },
   third_floor: {
-    pretty_name: 'Conceptual Art'
+    pretty_name: 'Conceptual Art',
     genre_selection: {
-      total_books: 500
+      total_books: 500,
       books_purchased: 100
     },
     bestseller: [
-      "Yoko Ono"
+      "Yoko Ono",
       "Sophie Calle"
     ]
   }
 }
+
+#showing I know how to print nested data (examples below) ;)
+
+bookstore[:first_floor][:bestseller]
+=> ["Haruki Murakmi", "Banana Yoshimoto"]
+
+bookstore[:second_floor][:genre_selection].reverse_each
+=> #<Enumerator: {:total_books=>1, :books_purchased=>100}:reverse_each>
+
+bookstore[:second_floor][:bestseller].reverse
+=> ["Emily Dickinson", "Elizabeth Schmuhl"]
+
+bookstore[:third_floor][:pretty_name].upcase!
+=> "CONCEPTUAL ART"
