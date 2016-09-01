@@ -6,6 +6,24 @@
 #if it is not, return nil
 
 
+#Struggling to find a solution, but these are the thoughts we have for Release 0 right now!
+
+#def search_array(arr, num)
+  #index = 0 
+  #while index < arr.length 
+    #found_num = false
+  #index +=1 
+  #if found_num = true
+    #break
+  #end
+#end
+#return index
+#end
+
+#arr = [ 2, 4, 6, 8]
+#search_array(arr, 2)
+
+
 def search_array(arr, num)
   arr.each {|x| 
     if x == num
@@ -19,6 +37,7 @@ end
  arr = [ 2, 4, 6, 8]
 
  search_array(arr, 2)
+
 
 #Release 1
 
