@@ -15,7 +15,7 @@
 ##Make the switch
 
 def name_switch (origional_name)
-  name_switched = origional_name.split('')
+  name_switched = origional_name.split('').reverse.join('')
   name_switched
 end
 
@@ -203,26 +203,6 @@ p str #=> "sixth fifth fourth third second first "
 # end
 # origional_name_array.join(''.split(" ").each{|i| i.capitalize!}.join(" ")
 # end
-
-
-# ##User Interface!
-# def interface
-#   interface_container = {}
-#   puts "Thank you for using the Spy Name Generator. Please enter your full name (first and last) or type 'quit' to exit the program."
-#   name_before_alias = gets.chomp
-#   while name_before_alias != "quit"
-#     name_switched = name_switch(name_before_alias)
-#     vowels_altered = vowel_changer(name_switched)
-#     new_alias = consonant_changer(vowels_altered)
-#     interface_container[name_before_alias] = new_alias
-#     name_before_alias = gets.chomp
-#     if name_before_alias = "quit"
-#       puts interface_container.each_pair{|input,output| puts "#{output} is also known as {input]"}
-#     end
-#   end
-# end
-
-# interface
 
 
 # begin
