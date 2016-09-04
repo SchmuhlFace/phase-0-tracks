@@ -11,7 +11,7 @@
 #How will you deal with the fact that some letters are uppercase?
 #How will you handle edge cases?
 
-#Release 1
+#Release 1 (before 0 for my brain)
 
 begin
   puts "Please enter your fullname."
