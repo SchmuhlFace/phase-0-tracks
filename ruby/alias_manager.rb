@@ -65,5 +65,22 @@ end
 # => "Mibbz Kanet"
 
 
+def interface
+  interface_container = {}
+  puts "Thank you for using the Spy Name Generator. Please enter your full name (first and last) or type 'quit' to exit the program."
+  name_before_alias = gets.chomp
+  while name_before_alias != "quit"
+    name_switched = name_switch(name_before_alias)
+    vowels_altered = vowel_changer(name_switched)
+    new_alias = consonant_changer(vowels_altered)
+    interface_container[name_before_alias] = new_alias
+    name_before_alias = gets.chomp
+    if name_before_alias = "quit"
+    end
+    puts interface_container.each_pair{|input,output| puts "Please start getting used to your new name: #{output}."}
+  end
+end
+
+interface
 
 
