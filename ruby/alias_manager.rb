@@ -1,4 +1,5 @@
 #Spy Name Generator#
+#By SchmuhlFace
 
 
 #Get user input of first and last name
@@ -14,7 +15,6 @@
 
 
 ##Make the switch
-
 def name_switch (origional_name)
   name_switched = origional_name.split('').reverse.join('')
   name_switched
@@ -83,8 +83,9 @@ end
 
 interface
 
+
 ##TESTING
- lizzy james
+ #lizzy james
  
 # Please start getting used to your new name, lizzy james, which is Tinek Zbbom.
 # {"lizzy james"=>"Tinek Zbbom"}
