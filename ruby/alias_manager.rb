@@ -59,7 +59,7 @@ def consonant_changer(origional_name)
       char
     end
 end
-origional_name_array.join('').split(" ").each{|i| i.capitalize!}.join(" ")
+origional_name_array.join('').split(" ").each{|letter| letter.capitalize!}.join(" ")
 end
 # p consonant_changer("Lizzy James")
 # => "Mibbz Kanet"
@@ -83,13 +83,11 @@ end
 
 interface
 
-#Testing
-# Lizzy James
+##TESTING
+ lizzy james
  
-# Please start getting used to your new name, Lizzy James, which is Tinek Zbbom.
-# {"Lizzy James"=>"Tinek Zbbom"}
-# => nil
-   
+# Please start getting used to your new name, lizzy james, which is Tinek Zbbom.
+# {"lizzy james"=>"Tinek Zbbom"}
 
 ##PLEASE SEE ALL RESEARCH BELOW!
  +
