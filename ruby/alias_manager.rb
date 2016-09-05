@@ -77,7 +77,7 @@ def interface
     name_before_alias = gets.chomp
     if name_before_alias = "quit"
     end
-    puts interface_container.each_pair{|input,output| puts "Please start getting used to your new name: #{output}."}
+    puts interface_container.each_pair{|input,output| puts "Please start getting used to your new name, #{input}, which is #{output}."}
   end
 end
 
