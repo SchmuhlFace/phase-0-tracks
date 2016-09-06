@@ -1,4 +1,6 @@
 
+# Pairing Lindsaymkelly @ SchmuhlFace
+
 #Release 0
 #create the method that intakes an array and a number
 #evaluate each component of the array and see if it is equal to num
