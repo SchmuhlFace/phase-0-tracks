@@ -1,10 +1,10 @@
 ##SantaCon Simulator
 
-class Santa
+class SantaCon
 
   #Your class should have three instance methods:
 
-  def initalize
+  def initialize
     puts "Initializing Santa instance..."
   end
 
@@ -15,3 +15,12 @@ class Santa
   def eat_milk_and_cookies(cookie_type)
     puts "That was a good #{cookie_type}!"
   end
+
+end
+
+#DRIVER CODE
+
+santa = SantaCon.new
+santa.speak
+santa.eat_milk_and_cookies("sugar cookie")
+
