@@ -1,4 +1,5 @@
 ##PSEUDOCODE
+#SchmuhlFace & jboralli
 
 # Method to create a list: Create an empty hash
 # input: string of items separated by spaces (example: "carrots 2 apples 3 cereal pizza")
