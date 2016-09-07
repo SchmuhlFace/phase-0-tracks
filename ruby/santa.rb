@@ -47,6 +47,11 @@ class SantaCon
     @ethnicity
   end
 
+  def info
+    puts "Santa is a #{@gender} who is #{@ethnicity} and #{age} years old."
+  end
+  
+
 
 end
 
@@ -64,8 +69,9 @@ p santa=SantaCon.new("agender", "black")
 p santa.speak
 p santa.eat_milk_and_cookies("sugar cookie")
 p santa.celebrate_birthday
-p santa.gender = "white"
+p santa.gender = "dude"
 p santa.get_mad_at("Vixen")
+santa.info
 #=> 2
 
 
