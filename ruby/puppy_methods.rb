@@ -2,46 +2,47 @@
   # zaslam72
   # schmuhlface
 
-# class Puppy
+class Puppy
 
-#   def fetch(toy)
-#     puts "I brought back the #{toy}!"
-#     toy
-#   end
+  def fetch(toy)
+    puts "I brought back the #{toy}!"
+    toy
+  end
 
-#   def speak(x)
-#     x.times do 
-#       puts "Woof!"
-#     end
-#   end
+  def speak(x)
+    x.times do 
+      puts "Woof!"
+    end
+  end
 
-#   def roll_over
-#     puts "*rolls over*"
-#   end
+  def roll_over
+    puts "*rolls over*"
+  end
 
-#   def dog_years(n)
-#     dog_age = n * 7
-#     p dog_age
-#   end
+  def dog_years(n)
+    dog_age = n * 7
+    p dog_age
+  end
 
-#   def sit
-#     puts "Sit!"
-#   end
+  def sit
+    puts "Sit!"
+  end
 
-#   def initialize
-#     puts "Initializing new puppy instance..."
-#   end
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
 
-# end
+end
 
 
-# # Driver code
-# maxine = Puppy.new
-# maxine.fetch("ball")
-# maxine.speak(4)
-# maxine.roll_over
-# maxine.dog_years(3)
-# maxine.sit
+# Driver code
+
+maxine = Puppy.new
+maxine.fetch("ball")
+maxine.speak(4)
+maxine.roll_over
+maxine.dog_years(3)
+maxine.sit
 
 
 class Fruit
@@ -63,6 +64,7 @@ class Fruit
 end
 
 # Driver code
+
 apple = Fruit.new
 apple.apples_in_basket(4)
 apple.color_of_apple("green")
