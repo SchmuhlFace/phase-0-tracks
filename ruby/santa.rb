@@ -20,6 +20,34 @@ class SantaCon
     puts "That was a good #{cookie_type}!"
   end
 
+  #Add three Attribute changing methods
+
+  def celebrate_birthday
+    @age += 1 
+  end
+
+  def get_mad_at(reindeer_name)
+    @reindeer_ranking.push(reindeer_name)
+    puts "You've been very naughty, #{reindeer_name}; there will be consequences!"
+  end
+
+  #setter for gender
+
+  def gender=(new_gender)
+    @gender=new_gender
+  end
+
+  #two getter methods
+
+  def age
+    @age
+  end
+
+  def enthinicty
+    @ethnicity
+  end
+
+
 end
 
 # 
@@ -27,17 +55,18 @@ end
 #DRIVER CODE
 
 #putting multiple instances into an array
-santas = []
-santas << SantaCon.new("agender", "black")
-santas << SantaCon.new("girlymon", "white")
+# santas = []
+# santas << SantaCon.new("agender", "black")
+# santas << SantaCon.new("girlymon", "white")
 
 #test
 p santa=SantaCon.new("agender", "black")
 p santa.speak
 p santa.eat_milk_and_cookies("sugar cookie")
-
-p santas
-p santas.length
+p santa.celebrate_birthday
+p santa.gender = "white"
+p santa.get_mad_at("Vixen")
+#=> 2
 
 
 
@@ -54,22 +83,10 @@ p santas.length
 #   end
   
 
-#   def celebrate_birthday
-#     @age += 1 
-#   end
 
-#   def get_mad_at(reindeer_name)
-#     @reindeer_ranking.push(reindeer)
-#     puts "You've been very naughty, #{reindeer_name}; there will be consequences!"
-#   end
 
-#   def age
-#     @age
-#   end
 
-#   def enthinicty
-#     @ethnicity
-#   end
+
     
 # end
 
