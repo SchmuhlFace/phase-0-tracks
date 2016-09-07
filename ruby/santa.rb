@@ -1,6 +1,8 @@
 ##SantaCon Simulator
 
 class SantaCon
+  attr_reader :age , :ethnicity
+  attr_accessor :gender
 
   #Your class should have three instance methods:
 
@@ -33,19 +35,19 @@ class SantaCon
 
   #setter for gender
 
-  def gender=(new_gender)
-    @gender=new_gender
-  end
+  #def gender=(new_gender)
+  #  @gender=new_gender
+  #end
 
   #two getter methods
 
-  def age
-    @age
-  end
+  #def age
+  #  @age
+  #end
 
-  def enthinicty
-    @ethnicity
-  end
+  #def enthinicty
+  #  @ethnicity
+  #end
 
   def info
     puts "Santa is a #{@gender} who is #{@ethnicity} and #{age} years old."
@@ -72,8 +74,6 @@ p santa.celebrate_birthday
 p santa.gender = "dude"
 p santa.get_mad_at("Vixen")
 santa.info
-#=> 2
-
 
 
 
