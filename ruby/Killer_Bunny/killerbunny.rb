@@ -82,7 +82,7 @@ puts "Oh no! A killer bunny is now in possession of your word. Let's see if play
       letter = gets.chomp
   
       if letter.length !=1
-        puts "Please only enter one letter. Type again!"
+        puts "One letter at a time, please. Try again."
    
       elsif killer_word.guessed_letter.include?(letter)
         puts "Hey! You've already guessed that letter. It won't count against you. Try again."
