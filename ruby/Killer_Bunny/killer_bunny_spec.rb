@@ -1,3 +1,6 @@
+
+#Trying to push this repo to GitHub now ;) SchmuhlFace
+
 # RSPEC
 # 'describe' block for each group of tests  
   # 'it' block for each individual test
