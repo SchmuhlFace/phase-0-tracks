@@ -17,7 +17,10 @@
 // Join them all back together into a string
 
 
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+reverseString("hello");
 
-
-
-
+//Test
+// => 'olleh'
