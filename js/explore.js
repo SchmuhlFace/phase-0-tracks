@@ -17,10 +17,24 @@
 // Join them all back together into a string
 
 
-function reverseString(str) {
+function reverseWord(str) {
     return str.split("").reverse().join("");
 }
-reverseString("hello");
+reverseWord("hello");
 
+//Test
+// => 'olleh'
+
+// Another version without built in functions!
+// i-- is like i++ but the opposite; it subtracts! found it online ;)
+
+function reverseWord(str) {
+    var newWord = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newWord += str[i];
+    }
+    return newWord;
+}
+reverseWord('hello');
 //Test
 // => 'olleh'
