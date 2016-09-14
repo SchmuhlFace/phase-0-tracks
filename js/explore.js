@@ -49,7 +49,7 @@ reverseWord('hello');
 // in a variable.
 
 // Driver code
-var newWord
+
 
 function reverseWord(str) {
     var newWord = "";
@@ -59,7 +59,7 @@ function reverseWord(str) {
     return newWord;
 }
 // reverseWord('hello');
-newWord = reverseWord('hello');
+var newWord = reverseWord('hello');
 
 // 2. Add driver code that prints the variable if some condition is 
 //true. The condition can be a silly one, like 1 == 1.
