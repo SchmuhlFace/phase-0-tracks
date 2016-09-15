@@ -10,3 +10,27 @@ colors.push("pink");
 
 // add another name
 names.push("Ed");
+
+// declare:
+
+// add code that will use your two arrays to create an object. 
+
+// The keys of your object should be horse names, and the values should be colors. Your solution should be something that would work for any number of colors/horses, as long as the two arrays are the same length. 
+
+//pseudocoding
+
+// Built in method of Java? (.key . value)
+// Sounds like an iteration // loop
+// 
+
+if (colors.length == names.length) {
+  var horse = {};
+  for (i = 0; i < colors.length; i ++) {
+      horse[names[i]] = colors[i]
+  }
+
+}
+
+//object value
+// var horse = {names: 'Snowball', colors: 'purple'};
+console.log(horse);
