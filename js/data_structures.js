@@ -1,39 +1,42 @@
+//7.2 Pairing SchmuhlFace & Zaslam72
+
+
 // // array of colors
-// var colors = ["purple", "blue", "green", "white"];
+var colors = ["purple", "blue", "green", "white"];
 
-// //array of four name
+//array of four name
 
-// var names = ["Snowball", "Unicorn", "Kitten", "Brownie"];
+var names = ["Snowball", "Unicorn", "Kitten", "Brownie"];
 
-// // add another color
-// colors.push("pink");
+// add another color
+colors.push("pink");
 
-// // add another name
-// names.push("Ed");
+// add another name
+names.push("Ed");
 
-// // declare:
+// declare:
 
-// // add code that will use your two arrays to create an object. 
+// add code that will use your two arrays to create an object. 
 
-// // The keys of your object should be horse names, and the values should be colors. Your solution should be something that would work for any number of colors/horses, as long as the two arrays are the same length. 
+// The keys of your object should be horse names, and the values should be colors. Your solution should be something that would work for any number of colors/horses, as long as the two arrays are the same length. 
 
-// //pseudocoding
+//pseudocoding
 
-// // Built in method of Java? (.key . value)
-// // Sounds like an iteration // loop
-// // 
+// Built in method of Java? (.key . value)
+// Sounds like an iteration // loop
+// 
 
-// if (colors.length == names.length) {
-//   var horse = {};
-//   for (i = 0; i < colors.length; i ++) {
-//       horse[names[i]] = colors[i]
-//   }
+if (colors.length == names.length) {
+  var horse = {};
+  for (i = 0; i < colors.length; i ++) {
+      horse[names[i]] = colors[i]
+  }
 
-// }
+}
 
-//object value
-// var horse = {names: 'Snowball', colors: 'purple'};
-// console.log(horse);
+object value
+var horse = {names: 'Snowball', colors: 'purple'};
+console.log(horse);
 
 
 function Car(type, color) {
