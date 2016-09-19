@@ -52,6 +52,22 @@ function compare(thing1, thing2) {
 };
 
 
+// RELEASE 2
+
+
+//The words should be of randomly varying length, with a minimum of 1 letter and a maximum of 10 letters. 
+
+// Add driver code that does the following 10 times: generates an array, prints the array, feeds the array to your "longest word" function, and prints the result.
+
+// I need an empty array to shovel things into
+var returned_string_array = [];
+//strings can be max 10 letters long
+for (var i = 0; i < 10; i ++) {
+  var rando_long = (Math.random()*10);
+  var new_word = "";
+}
+
+
 //DRIVERCODE TESTING BELOW!!!
 
 // for ***Release 0***
@@ -74,7 +90,7 @@ function compare(thing1, thing2) {
 
 // for ***Release 2***
 
-
+// I am very stuck on this and lost :( Planning to meet with others tonight and hopefully get some answers!
 
 
 
