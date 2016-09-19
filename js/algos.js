@@ -33,17 +33,16 @@ function determineLongest(array) {
 
 // write a function that takes two objects and checks to see if the objects share at least one key-value pair
 
-// set up a variable for the whole thing so it can be called and tested
-// enter two objects
+
+// enter two sets of info with two parts each to be compared
 // compare their keys and if they are equal, return true
 // if they are not equal, return false
 // remember to test and then move test code to the bottom and label
 
 var thing1 = {name: "Steven", age: 54};
 var thing2 = {name: "Tamir", age: 54};
-var result = compare(thing1,thing2);
 
-var compare = function(thing1, thing2) {
+function compare(thing1, thing2) {
   for (var key in thing1) {
     if (thing2[key] == thing1[key]) {
       return true;
@@ -52,13 +51,8 @@ var compare = function(thing1, thing2) {
   return false;
 };
 
-//set up variables as hashes b/c they store two pieces of info
 
-
-
-
-
-//DRIVERCODE TESTING
+//DRIVERCODE TESTING BELOW!!!
 
 // for ***Release 0***
 
@@ -70,10 +64,11 @@ var compare = function(thing1, thing2) {
 // mister tumnis
 // banana yoshimoto
 
+
+
 // for ***Release 1***
 
-// console.log(result);
-
+// console.log(compare(thing1,thing2));
 // => true
 
 
