@@ -33,7 +33,16 @@ function determineLongest(array) {
 
 // write a function that takes two objects and checks to see if the objects share at least one key-value pair
 
-// set up a variable for the whole things
+// set up a variable for the whole thing so it can be called and tested
+// enter two objects
+// compare their keys and if they are equal, return true
+// if they are not equal, return false
+// remember to test and then move test code to the bottom and label
+
+var thing1 = {name: "Steven", age: 54};
+var thing2 = {name: "Tamir", age: 54};
+var result = compare(thing1,thing2);
+
 var compare = function(thing1, thing2) {
   for (var key in thing1) {
     if (thing2[key] == thing1[key]) {
@@ -44,11 +53,9 @@ var compare = function(thing1, thing2) {
 };
 
 //set up variables as hashes b/c they store two pieces of info
-var thing1 = {name: "Steven", age: 54};
-var thing2 = {name: "Tamir", age: 54};
-var result = compare(thing1,thing2);
 
-console.log(result);
+
+
 
 
 //DRIVERCODE TESTING
@@ -62,9 +69,12 @@ console.log(result);
 // longest phrase
 // mister tumnis
 // banana yoshimoto
-// => undefined
 
 // for ***Release 1***
+
+// console.log(result);
+
+// => true
 
 
 // for ***Release 2***
