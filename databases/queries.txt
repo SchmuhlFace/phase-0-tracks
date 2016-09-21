@@ -56,4 +56,21 @@ There sure are a lot of different joins! left, right, full outer, inner, to name
 
 - Try a few different joins in your database, and record the commands (here they are):
 
+sqlite> select fruit.name
+   ...> from fruit
+   ...> where fruit.name not in (select name from seasons);
+peach
+apple
+strawberry
+tomato
+
+
+sqlite> Select  season from season.names right join fruit.name on name.key = name.key where name is null;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+   ...> select fruit from fruit.name full outer join seasons.id on fruit.name = seasons.name;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
+
 
