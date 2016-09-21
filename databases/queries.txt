@@ -45,3 +45,15 @@ sqlite> select * from fruit;
 2|apple|false|3
 3|strawberry|false|1
 4|tomato|false|3
+
+
+### Release 3 ###
+
+- There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+There sure are a lot of different joins! left, right, full outer, inner, to name a few. You can definitely apply different conditions to a join. I found some great resources and have book marked them. I like the visuals of circles too, which helps me see what's being shared (looks like a venn diagram and there are lots of them!).
+
+
+- Try a few different joins in your database, and record the commands (here they are):
+
+
