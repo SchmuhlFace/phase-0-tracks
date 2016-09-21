@@ -1,3 +1,5 @@
+8.4 pair with Hoah & SchmuhlFace
+
 table 1 = businesses
 table 2 = users
 table 3 = reviews
