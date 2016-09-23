@@ -64,7 +64,7 @@ def updated(hash)
         hash[key_update] = fresh_value
         end
 
-      puts " We hope you enjoyed using Interior D-Zign!"
+      puts "We hope you enjoyed using Interior D-Zign!"
       return hash
 
     end
@@ -98,9 +98,9 @@ puts "Welcome to Interior D-Zign! Please enter your client's details."
     application = updated(application)
     
     puts "Please review your client's info with them: #{application}"
+    #The application isn't reprinting here and I'm not sure why. This is a question for office hours! 
 end
 client
 
-#The application isn't reprinting here. I'm curious about that! 
 
 
