@@ -13,27 +13,65 @@ end
 
 say_yo { |name1, name2| puts "You look fresh, #{name1} and #{name2}!" }
 
+# => Yo, home-E!
+# You look fresh, Rory and June!
 
-# def say_yo
-#   puts "Yo, home-E!"
-#   3.times {yield}
-#   #yield evaluates the code before, which is a block
-# end
+# Release 1 ###########
 
-# say_yo {puts "You look fresh!"}
+# .each of an array
+
+animal_names = ["frog", "turtle", "fox"]
+new_animals = []
+
+puts "Original data:"
+p animal_names
+p new_animals
+
+animal_names.each do |animal|
+  new_animals << "rat"
+end
+
+puts "After .each call:"
+p animal_names
+p new_animals
+
+# . map! of an array
+
+animal_names = ["frog", "turtle", "fox"]
+new_animals = []
+
+puts "Original data:"
+p animal_names
+p new_animals
+
+animal_names.map! do |animal|
+  new_animals << "rat"
+end
+
+puts "After .each call:"
+p animal_names
+p new_animals
 
 
+# .each of a hash
 
 
+animalswbabies = {
+  frog: "2",
+  turtle: "100",
+  fox: "5"
+}
 
+animalswbabies.each do |animal, num_babies|
+  puts "The #{animal} has #{num_babies} babies."
+end
 
+# The frog has 2 babies.
+# The turtle has 100 babies.
+# The fox has 5 babies.
+# => {:frog=>"2", :turtle=>"100", :fox=>"5"}
 
-
-
-
-
-
-
+## .map notes
 
 
 
