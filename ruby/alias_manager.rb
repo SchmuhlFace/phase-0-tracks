@@ -14,6 +14,8 @@
 
 
 ##Make the switch
+#reverse first and last names
+#rejoin
 
 def name_switch (origional_name)
   name_switched = origional_name.split('').reverse.join('')
@@ -23,3 +25,24 @@ end
 ##TESTING:
 #p name_switch ('james madison')
 #=> "nosidam semaj"
+
+
+def vowel_changer(origional_name)
+  origional_name_array = origional_name.downcase.chars
+  vowels = %w{a e i o u}
+  origional_name_array.map! do |char|
+    if char == "u"
+        char = "a"
+    elsif vowels.include?(char)
+      change_vowel_index = vowels.index(char) + 1
+      vowel_changed = vowels[change_vowel_index]
+    else
+      char
+    end
+  end
+  origional_name_array.join('')
+
+end
+
+#p vowel_changer ("hey")
+# => "hiy"
