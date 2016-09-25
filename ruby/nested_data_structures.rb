@@ -1,6 +1,7 @@
 #Bookstore Nested Data Structure by SchmuhlFace
 
 bookstore = {
+
   first_floor: {
     section_name: 'Fiction',
     genre_selection: {
@@ -41,11 +42,11 @@ bookstore = {
 bookstore[:first_floor][:bestseller]
 => ["Haruki Murakmi", "Banana Yoshimoto"]
 
-bookstore[:second_floor][:genre_selection].reverse_each
-=> #<Enumerator: {:total_books=>1, :books_purchased=>100}:reverse_each>
+bookstore[:second_floor][:genre_selection].empty?
+=> false
 
 bookstore[:second_floor][:bestseller].reverse
 => ["Emily Dickinson", "Elizabeth Schmuhl"]
 
-bookstore[:third_floor][:section_name].upcase!
+bookstore[:third_floor][:section_name].upcase
 => "CONCEPTUAL ART"
