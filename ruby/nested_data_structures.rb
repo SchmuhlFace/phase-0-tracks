@@ -2,7 +2,7 @@
 
 bookstore = {
   first_floor: {
-    pretty_name: 'Fiction',
+    section_name: 'Fiction',
     genre_selection: {
       total_books: 300,
       books_purchased: 50
@@ -13,7 +13,7 @@ bookstore = {
     ]
   },
   second_floor: {
-    pretty_name: 'Poetry',
+    section_name: 'Poetry',
     genre_selection: {
       total_books: 1,
       books_purchased: 100
@@ -24,7 +24,7 @@ bookstore = {
     ]
   },
   third_floor: {
-    pretty_name: 'Conceptual Art',
+    section_name: 'Conceptual Art',
     genre_selection: {
       total_books: 500,
       books_purchased: 100
@@ -47,5 +47,5 @@ bookstore[:second_floor][:genre_selection].reverse_each
 bookstore[:second_floor][:bestseller].reverse
 => ["Emily Dickinson", "Elizabeth Schmuhl"]
 
-bookstore[:third_floor][:pretty_name].upcase!
+bookstore[:third_floor][:section_name].upcase!
 => "CONCEPTUAL ART"
