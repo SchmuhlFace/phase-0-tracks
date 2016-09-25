@@ -1,4 +1,6 @@
 
+# Pairing Lindsaymkelly @ SchmuhlFace
+
 #Release 0
 #create the method that intakes an array and a number
 #evaluate each component of the array and see if it is equal to num
@@ -23,20 +25,42 @@
 #arr = [ 2, 4, 6, 8]
 #search_array(arr, 2)
 
+# def search_array(arr, num)
+#   arr.each {|x| 
+#     if x == num
+#     print x
+#     else x != num
+#     print nil
+#     end   } 
 
-def search_array(arr, num)
-  arr.each {|x| 
-    if x == num
-    print x
-    else x != num
-    print nil
-    end   } 
+# end
 
+#  arr = [ 2, 4, 6, 8]
+
+#  search_array(arr, 2)
+
+##We found a solution together! yay! 
+
+
+def search(array, num)
+    i = 0
+    while i < array.length
+
+    return i if array[i] == num
+   i += 1
+    end
 end
 
- arr = [ 2, 4, 6, 8]
 
- search_array(arr, 2)
+a = [21, 27, 1, 5]
+p search(a, 23)
+=> nil
+
+a = [21, 27, 1, 5]
+p search(a, 1)
+=> 2
+
+
 
 
 #Release 1

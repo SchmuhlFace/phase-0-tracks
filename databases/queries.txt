@@ -1,0 +1,76 @@
+Run a SQL query for each of the following:
+
+Display the information in one table (either table is fine).
+
+sqlite> select * from fruit;
+1|peach|true|2
+2|apple|false|3
+3|strawberry|false|1
+4|tomato|false|3
+5|winter berry|true|4
+
+- Update an item that meets some condition (you can choose a condition that makes sense).
+
+sqlite> update fruit set pit="false" where name="winter berry";
+sqlite> select * from fruit ;
+1|peach|true|2
+2|apple|false|3
+3|strawberry|false|1
+4|tomato|false|3
+5|winter berry|false|4
+
+- Display the information in both tables using one query.
+
+sqlite> SELECT * FROM fruit, seasons WHERE fruit.season_id = seasons.id;
+1|peach|true|2|2|Summer
+2|apple|false|3|3|Fall
+3|strawberry|false|1|1|Spring
+4|tomato|false|3|3|Fall
+5|winter berry|false|4|4|Winter
+
+- Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+sqlite> SELECT fruit.name, seasons.name FROM fruit JOIN seasons ON fruit.season_id = seasons.id;
+peach|Summer
+apple|Fall
+strawberry|Spring
+tomato|Fall
+winter berry|Winter
+
+- Delete an item that meets some condition (you can choose a condition that makes sense). ** I deleted winter berry because it's a fruit i made up to have a fruit in winter ;)
+
+sqlite> DELETE from fruit WHERE name = "winter berry";
+sqlite> select * from fruit;
+1|peach|true|2
+2|apple|false|3
+3|strawberry|false|1
+4|tomato|false|3
+
+
+### Release 3 ###
+
+- There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed? Can you bookmark any good diagrams that will help you tell different joins apart in the future?
+
+There sure are a lot of different joins! left, right, full outer, inner, to name a few. You can definitely apply different conditions to a join. I found some great resources and have book marked them. I like the visuals of circles too, which helps me see what's being shared (looks like a venn diagram and there are lots of them!).
+
+
+- Try a few different joins in your database, and record the commands (here they are):
+
+sqlite> select fruit.name
+   ...> from fruit
+   ...> where fruit.name not in (select name from seasons);
+peach
+apple
+strawberry
+tomato
+
+
+sqlite> Select  season from season.names right join fruit.name on name.key = name.key where name is null;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+   ...> select fruit from fruit.name full outer join seasons.id on fruit.name = seasons.name;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
+
+
