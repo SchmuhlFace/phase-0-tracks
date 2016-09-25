@@ -1,3 +1,52 @@
+5.3 REDO
+
+# Release 0
+
+
+def say_yo
+  puts "Yo, home-E!"
+  yield("Rory", "June")
+  #yield evaluates the code before, which is a block
+end
+
+#value of block parameter defaults to nil
+
+say_yo { |name1, name2| puts "You look fresh, #{name1} and #{name2}!" }
+
+
+# def say_yo
+#   puts "Yo, home-E!"
+#   3.times {yield}
+#   #yield evaluates the code before, which is a block
+# end
+
+# say_yo {puts "You look fresh!"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 5.3 Pairing lsw0011 & SchmuhlFace
 
 ##Release 0
