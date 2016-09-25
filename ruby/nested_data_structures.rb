@@ -50,3 +50,6 @@ bookstore[:second_floor][:bestseller].reverse
 
 bookstore[:third_floor][:section_name].upcase
 => "CONCEPTUAL ART"
+
+bookstore[:third_floor][:bestseller][0].upcase
+=> "YOKO ONO"
