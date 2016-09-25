@@ -1,5 +1,5 @@
 
-# Pairing Lindsaymkelly @ SchmuhlFace
+# Pairing SchmuhlFace
 
 #Release 0
 #create the method that intakes an array and a number
@@ -8,56 +8,22 @@
 #if it is not, return nil
 
 
-#Struggling to find a solution, but these are the thoughts we have for Release 0 right now!
-
-#def search_array(arr, num)
-  #index = 0 
-  #while index < arr.length 
-    #found_num = false
-  #index +=1 
-  #if found_num = true
-    #break
-  #end
-#end
-#return index
-#end
-
-#arr = [ 2, 4, 6, 8]
-#search_array(arr, 2)
-
-# def search_array(arr, num)
-#   arr.each {|x| 
-#     if x == num
-#     print x
-#     else x != num
-#     print nil
-#     end   } 
-
-# end
-
-#  arr = [ 2, 4, 6, 8]
-
-#  search_array(arr, 2)
-
-##We found a solution together! yay! 
-
-
-def search(array, num)
-    i = 0
-    while i < array.length
-
-    return i if array[i] == num
-   i += 1
-    end
+def search_array(a, num)
+  i = 0
+  while i < a.length 
+  
+  return i if a[i] == num
+  i += 1
+  end
 end
 
 
 a = [21, 27, 1, 5]
-p search(a, 23)
+p search_array(a, 23)
 => nil
 
 a = [21, 27, 1, 5]
-p search(a, 1)
+p search_array(a, 1)
 => 2
 
 
