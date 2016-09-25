@@ -46,3 +46,21 @@ end
 
 #p vowel_changer ("hey")
 # => "hiy"
+
+def consonant_changer(origional_name)
+  origional_name_array = origional_name.downcase.chars
+  consonants = %w{b c d f g h j k l m n p q r s t v w x y z}
+  origional_name_array.map! do |char|
+    if char == "z"
+        char = "b"
+    elsif consonants.include?(char)
+      changed_consonants_index = consonants.index(char) +1
+      changed_consonants = consonants[changed_consonants_index]
+    else
+      char
+    end
+end
+origional_name_array.join('').split(" ").each{|letter| letter.capitalize!}.join(" ")
+end
+# p consonant_changer("Lizzy James")
+# => "Mibbz Kanet"
