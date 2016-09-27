@@ -13,8 +13,8 @@
 
 class Santa
 
-  attr_reader :age , :ethnicity 
-  attr_accessor :gender 
+  attr_reader :ethnicity 
+  attr_accessor :gender , :age
 
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
@@ -66,43 +66,34 @@ random_ethnicity_array = ["black", "latina", "white", "japanese", "human", "unic
 ethnicity = random_ethnicity_array[rand(random_ethnicity_array.length)]
 end
 
+
+
+#Interface
+
+puts "Let's make some santas! Press *enter* when you are ready."
+enter = gets.chomp 
+
+#Collect and make satnas
+
 santa_collect = []
 
-santa_collect << Santa.new(random_gender, random_ethnicity )
-santa_collect << Santa.new(random_gender, random_ethnicity )
+while true 
 
-p santa_collect
+10.times do |number|
+santa_bb = Santa.new(random_gender, random_ethnicity)
+santa_bb.age = rand(140)
+puts "Santa ##{number+1}'s info: #{santa_bb.info}"
+puts " *****************"
+end
 
+puts "Please press enter to make more santas. If you're tired, type *quit* to exit"
+user_input = gets.chomp
+if user_input == "quit"
 
-# santa_collect = []
-
-#   10.times do |number|
-#   bb_santa = Santa.new(random_gender, random_ethnicity)
-#   bb_santa.age = rand(140)
-#   bb_santa.random_gender
-#   bb_santa.random_ethnicity
-
-
-
-
-
-# # p bb_santa.speak
-# # p bb_santa.eat_milk_and_cookies("snickerdoodle")
-
-# Use our array of example genders and an array of example ethnicities (and feel free to add to it if you like -- each array could have a lot more options in it!) to create your Santas with a randomly selected gender and a randomly selected ethnicity. (How do you randomly select an array item? The Array documentation should be able to help you out there!)
-
-
-# Set your new Santa's age to a random number between 0 and 140.
-# No need to store your Santas in a data structure, but your program should print out the attributes of each Santa using the instance methods that give you access to that data.
+  puts "Have a ball at SantaCon. Santa you later!"
+  break
+  end
+end
 
 
 
-
-
-
-# Initializing Santa instance...
-# Ho, ho, ho! Haaaappy holidays!
-# nil
-# That was a good snickerdoodle cookie.
-# nil
-# => nil
