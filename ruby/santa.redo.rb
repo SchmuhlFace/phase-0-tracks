@@ -40,16 +40,27 @@ class Santa
     puts "Santa is a #{@gender} who is #{@ethnicity} and #{@age} years old."
   end
 
-  # I am commenting the get_mad_at method for debugging ease (same below)
-
-
-  # def get_mad_at(bad_reindeer)
-  #@reindeer_ranking.push(bad_reindeer)
-  #  puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
-  #  p @reindeer_ranking
-  #end  
+   def get_mad_at(bad_reindeer)
+    @reindeer_ranking.delete(bad_reindeer)
+    p @reindeer_ranking.push(bad_reindeer)
+    puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
+  end  
 
   
+end
+
+
+
+# santa_bb = Santa.new("rainbow", "human" )
+
+# p santa_bb.info
+# p santa_bb.get_mad_at("Vixen")
+
+# ["Rudolph", "Dasher", "Dancer", "Prancer", "Comet", "Cupid", "Donner", "Blitzen", "Vixen"]
+# Hey Vixen! Bad, Vixen; you shouldn't have eaten my cookie! To the end of the line!
+# nil
+# => nil
+   
 end
 
 ### DRIVER CODE
