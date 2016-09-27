@@ -13,14 +13,14 @@
 
 class Santa
 
-  attr_reader :age , :ethnicity
-  attr_accessor :gender
+  attr_reader :age , :ethnicity 
+  attr_accessor :gender 
 
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
-    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    # @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
   end
 
@@ -35,59 +35,43 @@ class Santa
   def celebrate_birthday
     @age +=1
   end
+
+  def info
+    puts "Santa is a #{@gender} who is #{@ethnicity} and #{@age} years old."
+  end
+
+  # I am commenting the get_mad_at method for debugging ease (same below)
+
+
+  # def get_mad_at(bad_reindeer)
+  #@reindeer_ranking.push(bad_reindeer)
+  #  puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
+  #  p @reindeer_ranking
+  #end  
+
   
 end
 
-santas = []
+### DRIVER CODE
 
-example_genders = ["butterfly", "female", "bigender", "male", "female", "gender fluid", "rainbow"]
+# randomly select gender and ethnicity for a santa
 
-example_ethnicities = ["black", "latina", "white", "japanese", "human", "unicorn", "wizard"]
-
-example_genders.length.times do |i|
-  santas << Santa.new(example_genders[i], example_ethnicities[i])
+def random_gender
+random_gender_array = ["butterfly", "female", "bigender", "male", "female", "gender fluid", "rainbow"]
+gender = random_gender_array[rand(random_gender_array.length)]
 end
 
-#this prints the array of santas, where we are storing all of them! 
+def random_ethnicity
+random_ethnicity_array = ["black", "latina", "white", "japanese", "human", "unicorn", "wizard"]
+ethnicity = random_ethnicity_array[rand(random_ethnicity_array.length)]
+end
 
-p santas
+santa_collect = []
 
+santa_collect << Santa.new(random_gender, random_ethnicity )
+santa_collect << Santa.new(random_gender, random_ethnicity )
 
-
-
-
-
-
-
-
-
-#Why isn't Vixen leaving? Vixen goes to the end but stays in place too! WHHHHHYYYY
-
-#   def get_mad_at(bad_reindeer)
-#     @reindeer_ranking.push(bad_reindeer)
-#       puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
-#       p @reindeer_ranking
-#   end  
-
-#     def info
-#     puts "Santa is a #{@gender} who is #{@ethnicity} and #{@age} years old. This santa's reindeer lineup post cookie incident: #{@reindeer_ranking}"
-#   end
-# end
-
-# driver code
-
-# def random_gender
-# example_genders = ["butterfly", "female", "bigender", "male", "female", "gender fluid", "rainbow"]
-# random_gender = [rand(example_genders)]
-# santa_collect << random_gender
-# end
-
-# def random_ethnicity
-#   example_ethnicities = ["black", "latina", "white", "japanese", "human", "unicorn", "wizard"]
-#   random_ethnicity = [rand(example_ethnicities)]
-#   santa_collect << random_ethnicity
-# end
-
+p santa_collect
 
 
 # santa_collect = []
