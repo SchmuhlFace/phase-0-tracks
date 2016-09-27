@@ -40,6 +40,15 @@ class Santa
       puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
       p @reindeer_ranking
   end
+
+  def age
+    @age 
+  end
+
+  def enthnicity
+    @ethnicity
+  end
+  
   
 end
 
