@@ -20,7 +20,7 @@ class Santa
     puts "Initializing Santa instance..."
     @gender = gender
     @ethnicity = ethnicity
-    # @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     @age = 0
   end
 
@@ -40,27 +40,27 @@ class Santa
     puts "Santa is a #{@gender} who is #{@ethnicity} and #{@age} years old."
   end
 
-   def get_mad_at(bad_reindeer)
+  def get_mad_at(bad_reindeer)
     @reindeer_ranking.delete(bad_reindeer)
-    p @reindeer_ranking.push(bad_reindeer)
     puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
+    return @reindeer_ranking.push(bad_reindeer)
   end  
+
 
   
 end
 
-
+## TESTING CODE
 
 # santa_bb = Santa.new("rainbow", "human" )
 
 # p santa_bb.info
 # p santa_bb.get_mad_at("Vixen")
 
-# ["Rudolph", "Dasher", "Dancer", "Prancer", "Comet", "Cupid", "Donner", "Blitzen", "Vixen"]
 # Hey Vixen! Bad, Vixen; you shouldn't have eaten my cookie! To the end of the line!
-# nil
-# => nil
-   
+# ["Rudolph", "Dasher", "Dancer", "Prancer", "Comet", "Cupid", "Donner", "Blitzen", "Vixen"]
+# => ["Rudolph", "Dasher", "Dancer", "Prancer", "Comet", "Cupid", "Donner", "Blitzen", "Vixen"]
+
 end
 
 ### DRIVER CODE
