@@ -1,31 +1,65 @@
 ##Writing my first module!
 
+module Shout
+# we'll put some methods here soon, but this code is fine for now!
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ##Writing my first module!
 
-module Shout
+# module Shout
 
-  def yell_angrily(words)
-    words + "!!!" + " :("
-  end
+#   def yell_angrily(words)
+#     words + "!!!" + " :("
+#   end
 
-  def yell_happily(words)
-    words + "!!!" + " :)"
-  end
+#   def yell_happily(words)
+#     words + "!!!" + " :)"
+#   end
 
-end
-
-
-# Declare Classes
+# end
 
 
-class Human
-  include Shout
-end
+# # Declare Classes
 
-class Fox
-  include Shout
-end
 
+# class Human
+#   include Shout
+# end
+
+# class Fox
+#   include Shout
+# end
+
+ #$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 #Test mixin
 
