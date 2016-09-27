@@ -5,7 +5,7 @@ module Shout
     words + "!!!" + " :("
   end
 
-  def yell_happily(words)
+  def self.yell_happily(words)
     words + "!!!" + " :)"
   end
 end
