@@ -1,13 +1,26 @@
 ##Writing my first module!
 
 module Shout
-# we'll put some methods here soon, but this code is fine for now!
+  def self.yell_angrily(words)
+    words + "!!!" + " :("
+  end
 
+  def yell_happily(words)
+    words + "!!!" + " :)"
+  end
 end
 
 
 
+# DRIVER CODE
+#Test
 
+# Shout.yell_angrily("hey")
+# => "hey!!! :("
+
+
+# Shout.yell_happily("why")
+# => "why!!! :)"
 
 
 
