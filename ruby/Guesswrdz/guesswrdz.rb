@@ -9,13 +9,13 @@
 
 class Guesswrdz
   
-  attr_accessor :secretword , :guessword
+  #attr_accessor :secretword , :guessword
   # attr_reader 
   
   def initialize(secretword) 
-    @secretword = secretword
+    @secretword = "secretword"
     @guess_word = ""
-    secret_word.length.times {@guess_word << "-"}
+    secretword.length.times {@guess_word << "-"}
     @guess_array = []
     @guessed_letter = []
     @guesses_left = 1 * secretword.length
@@ -53,12 +53,13 @@ class Guesswrdz
 
 end
 
-        
-
-
-# game = Guesswrdz.new("hey")
-
 
 # interface
 
-puts "Welcome to the Guesswrdz"
+puts "Welcome to **** GuessWrdz ****. Player one, please enter a word, then hand over your device to player 2."
+  secretword = gets.chomp
+  game = Guesswrdz.new(secretword)
+
+puts "Hello player two! You have #{secretword.length} guesses to guess the word. Begin guessing!"
+  guessword = gets.chomp
+
