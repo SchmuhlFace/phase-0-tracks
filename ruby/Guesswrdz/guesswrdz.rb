@@ -9,7 +9,7 @@
 
 class Guesswrdz
   
-  # attr_accessor :secretword
+  attr_accessor :secretword , :guessword
   # attr_reader 
   
   def initialize(secretword) 
@@ -17,12 +17,48 @@ class Guesswrdz
     @guess_word = ""
     secret_word.length.times {@guess_word << "-"}
     @guess_array = []
-    @guessed_letter = ""
+    @guessed_letter = []
     @guesses_left = 1 * secretword.length
     @guesscount = 0 
   end 
 
-    
+
+#Check if the user's guess includes a letter from the secret ord
+
+  def include?(letter)
+    @guesscount +=1
+    guessed_letter << letter
+    if @secretword.include?(letter)
+      letter_index = 0
+      @secretword.each_char do |l|
+        @guessword[letter_index] = 1 if 
+        l == letter
+        letter_index += 1
+      end
+      return true
+    else
+      return false
+    end
+  end
+
+#Has the player guessed the word?
+
+  def win?
+    if @secretword == @guessword
+      return true
+    else
+      return false
+    end
+  end
+
 end
 
+        
+
+
 # game = Guesswrdz.new("hey")
+
+
+# interface
+
+puts "Welcome to the Guesswrdz"
