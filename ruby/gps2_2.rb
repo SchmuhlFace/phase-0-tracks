@@ -62,16 +62,35 @@ p my_list = print_list(my_list)
 # output: updated hash grocery list
 
 # Method to remove an item from the list
-# input:
-# steps:
-# output:
+# input: list hash/collection and the item as parameters
+# steps: delete a specific item in the list as well as it's quantity
+# output: new list with the deleted item gone.
 
 # Method to update the quantity of an item
-# input:
-# steps:
-# output:
+# input: list hash/collection and the quantity
+# steps: USe the list hash and key to call up the number which is the value and put a new number in its place
+# output: updated list with new quantity 
 
 # Method to print a list and make it look pretty
-# input:
-# steps:
-# output:
+# input: the final list
+# steps: use the awesome .each method to print out each item and quantity, which will make this look pretty. Add punctuation for added flare.
+# output: a VERY lovely list of items with quantities so I can go grocery shopping RIGHT ;)
+
+
+
+#REFLECTION
+
+#What I learned about pseudocoding: I don't need to be so stressed about it. I had the chance to practice it on my own and it went well. Daniel suggested I do the first two, and then the rest. this helped tremendously.
+
+#Trade offs: hashes and arrays are containers, and important for this exercise. I like that a an array was needed first, and it transitioned nicely into a hash ( even logically so!).
+
+#A method returns the last declared variable. I GET this now! I also understand why we need to sometimes use hard returns ( we don't have to in this exercise).
+
+#You can pass all kinds of things between methods when you use variables, even other methods (says the text at the top of this exercise). This time I passed my hash via a variable, a string, and an integer. 
+
+#Because I was able to solo pair, I now am really understanding how to make methods "speak" to each other. I went through making "bad code" become good code, and Daniel helped me see the *logical* progression of how this works. I liked being able to think through things by making mistakes and seeing my errors, as well as learning more DRY ways to do things. I'm going to retry this exercise on my own for practice / a refresher before the RUBY test, b/c I found this very helpful. In my last pair, we made an EXTREMLY complicated program that really confused me. This time, I feel MUCH better about the concepts I've learned ( hashes, arrays, how to pass info, etc.)
+
+
+
+
+
