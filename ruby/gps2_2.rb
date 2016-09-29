@@ -2,7 +2,6 @@
 
 
   def create_grocery_list(str_items)
-    # array_items = str_items.split(" ")
     grocery_list = {}
     str_items.split(" ").each do |item| 
       grocery_list[item]= 1
@@ -15,12 +14,32 @@
     g_l
   end
 
+  def remove_item(g_l, str_item_remove)
+    g_l.delete(str_item_remove)
+    g_l
+  end
+
+  def update_quantity(g_l,str_item,new_num)
+    g_l[str_item] = new_num
+    g_l
+  end
+
+  def print_list(g_l)
+    puts "here's your grocery list:"
+    g_l.each {|item,quantity| puts "*#{item}:#{quantity}"}
+  end
+
+
 #Driver code
 
 my_list = create_grocery_list("apples cereal pizza")
 my_list = add_item(my_list, "peach", 2)
 my_list = add_item(my_list, "berry", 2)
 p my_list
+p my_list = remove_item(my_list,"peach")
+p my_list = update_quantity(my_list,"berry",100)
+p my_list = print_list(my_list)
+
 
 
 # Method to create a list
