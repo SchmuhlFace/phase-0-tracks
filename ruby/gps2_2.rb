@@ -35,9 +35,13 @@
 my_list = create_grocery_list("apples cereal pizza")
 my_list = add_item(my_list, "peach", 2)
 my_list = add_item(my_list, "berry", 2)
+my_list = add_item(my_list, "lemonade", 2)
+my_list = add_item(my_list, "tomatoes", 3)
+my_list = add_item(my_list, "onions", 1)
+my_list = add_item(my_list, "icecream", 4)
 p my_list
-p my_list = remove_item(my_list,"peach")
-p my_list = update_quantity(my_list,"berry",100)
+p my_list = remove_item(my_list,"lemonade")
+p my_list = update_quantity(my_list,"icecream",1)
 p my_list = print_list(my_list)
 
 
