@@ -7,48 +7,46 @@
 #some kind of interface that denotes different users 
 
 
+
+
 class Guesswrdz
   
-  #attr_accessor :secretword , :guessword
-  # attr_reader 
+  attr_accessor :guessing_word , :guess_array
   
-  def initialize(secretword) 
-    @secretword = "secretword"
-    @guess_word = ""
-    secretword.length.times {@guess_word << "-"}
+  def initialize(guessing_word) 
+    @guessing_word = guessing_word
     @guess_array = []
-    @guessed_letter = []
-    @guesses_left = 1 * secretword.length
-    @guesscount = 0 
   end 
 
 
-#Check if the user's guess includes a letter from the secret ord
+#Check if the user's guess includes a letter from the secret word
 
-  def include?(letter)
-    @guesscount +=1
-    guessed_letter << letter
-    if @secretword.include?(letter)
-      letter_index = 0
-      @secretword.each_char do |l|
-        @guessword[letter_index] = 1 if 
-        l == letter
-        letter_index += 1
-      end
-      return true
-    else
-      return false
-    end
+  def guess_container(guess)
+    @guess_array.push(guess)
   end
 
-#Has the player guessed the word?
+  def current_status
+    result = ""
 
-  def win?
-    if @secretword == @guessword
-      return true
-    else
-      return false
-    end
+    @guessing_word.split("").each { |letter|
+      if @guess_array.include?(letter)
+        result << letter
+       else
+        result << "_ "
+      end
+    }
+    
+    return result
+  end
+
+  def won
+    status = self.current_status
+    hasUnderscore = status.include?("_")
+    return !hasUnderscore
+  end
+  
+  def lost
+    return @guess_array.length >= @guessing_word.length
   end
 
 end
@@ -57,9 +55,20 @@ end
 # interface
 
 puts "Welcome to **** GuessWrdz ****. Player one, please enter a word, then hand over your device to player 2."
-  secretword = gets.chomp
-  game = Guesswrdz.new(secretword)
+  secret_word = gets.chomp
+  game = Guesswrdz.new(secret_word)
 
-puts "Hello player two! You have #{secretword.length} guesses to guess the word. Begin guessing!"
-  guessword = gets.chomp
+until game.won || game.lost
+  puts "Player 2, please begin guessing the word!"
+  
+  current_guess = gets.chomp[0]
+  game.guess_container(current_guess)
+  puts game.current_status
+end
+
+if game.won
+  puts "CONGRATS! You won!"
+else 
+  puts ":( You lost the game! Unfortunately, you didn't get guess the secret word, which was ***#{secret_word}***. Try again another time!"
+end
 
