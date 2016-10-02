@@ -1,4 +1,6 @@
 
+# I am trying to push this to GH again; failed last time
+
 #things i need for program:
 #a way to check all letters against letters in the word
 #a way to update a sort of hangman board that shows user when they've guessed a correct letter
