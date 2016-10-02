@@ -7,7 +7,7 @@
 #some kind of interface that denotes different users 
 
 
-
+#Pseudocode on scratch pad.
 
 class Guesswrdz
   
@@ -25,6 +25,8 @@ class Guesswrdz
     @guess_array.push(guess)
   end
 
+#print the current state of the game / guessed letters of the secret wrod
+
   def current_status
     result = ""
 
@@ -38,6 +40,8 @@ class Guesswrdz
     
     return result
   end
+
+  #two methods: one for winning and one for losing
 
   def won
     status = self.current_status
@@ -55,8 +59,13 @@ end
 # interface
 
 puts "Welcome to **** GuessWrdz ****. Player one, please enter a word, then hand over your device to player 2."
+
+#instantiate / create a new instance fo the class
+
   secret_word = gets.chomp
   game = Guesswrdz.new(secret_word)
+
+#conditional
 
 until game.won || game.lost
   puts "Player 2, please begin guessing the word!"
@@ -65,6 +74,8 @@ until game.won || game.lost
   game.guess_container(current_guess)
   puts game.current_status
 end
+
+#conditional
 
 if game.won
   puts "CONGRATS! You won!"
