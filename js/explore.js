@@ -16,7 +16,6 @@ reverseWord("hello");
 // => 'olleh'
 
 // Another version without built in functions!
-// i-- is like i++ but the opposite; it subtracts! found it online ;)
 
 var newWord
 //I'm not sure if the variable above is working...
@@ -42,7 +41,7 @@ reverseWord('hello');
 
 
 function reverseWord(str) {
-    var newWord = "";
+    var newWord = '';
     for (var i = str.length - 1; i >= 0; i--) {
         newWord += str[i];
     }
@@ -52,8 +51,7 @@ function reverseWord(str) {
 // reverseWord('snow');
 // => 'wons'
 
-// 2. Add driver code that prints the variable if some condition is 
-//true. The condition can be a silly one, like 1 == 1.
+//CONDITIONAL
 
 if (1 == 1) {
     console.log(newWord);
