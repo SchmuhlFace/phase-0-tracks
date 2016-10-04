@@ -1,7 +1,7 @@
 # Virus Predictor
 
 # I worked on this challenge [by myself, with: Jessie_yang0302].
-# We spent [#] hours on this challenge.
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
 # require data from file state_data so that we can use data from that file in this file. 
