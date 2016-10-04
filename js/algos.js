@@ -5,16 +5,16 @@
 
 // create a label to reference a collection of three phrases.
 // make a way to examine three different phrases in a collection (function)
-// make sure to set up a counter of 0 to compare the length of the phrase to something.
-// have the function go over each phase and count how long it is.
-// determine which phrase is the longest.
+// make sure to set up a counter to 0 to compare the length of the phrase to something.
+// function should go over/scan each phase and count how long it is.
+// function should also determine which phrase is the longest.
 // return only the longest phrase of the three phrases.
 
 //RELEASE 0
 
 var phrases = ["long phrase","longest phrase","longer phrase"]
 var animals = ["cheetah","lion" ,"minx", "mister tumnis"]
-var authors = ["banana yoshimoto","haruki murakami", "kawabate"]
+var authors = ["banana yoshimoto","haruki murakami", "Anne Carson"]
 
 function determineLongest(array) {
   var letterCounter = 0;
