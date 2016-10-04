@@ -34,10 +34,9 @@ function determineLongest(array) {
 // write a function that takes two objects and checks to see if the objects share at least one key-value pair
 
 
-// enter two sets of info with two parts each to be compared
+// enter two sets of info with two parts each to be compared ( this is a hash of course)
 // compare their keys and if they are equal, return true
 // if they are not equal, return false
-// remember to test and then move test code to the bottom and label
 
 var thing1 = {name: "Steven", age: 54};
 var thing2 = {name: "Tamir", age: 54};
@@ -49,7 +48,7 @@ function compare(thing1, thing2) {
     }
   }
   return false;
-};
+}
 
 
 // RELEASE 2
@@ -90,7 +89,17 @@ for (var i = 0; i < 10; i ++) {
 
 // for ***Release 2***
 
-// I am very stuck on this and lost :( Planning to meet with others tonight and hopefully get some answers!
+// console.log(randomWords(10))
+// [ 'ojigzv',
+//   'cr',
+//   'w',
+//   'wnf',
+//   'zfax',
+//   'lghp',
+//   'ant',
+//   'yvbigtf',
+//   'uwfu',
+//   'tqyzz' ]
 
 
 
