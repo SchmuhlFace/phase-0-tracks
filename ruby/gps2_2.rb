@@ -9,6 +9,7 @@
     grocery_list
   end
 
+<<<<<<< HEAD
   def add_item(list, str_item, num)
     list[str_item] = num 
     list
@@ -27,6 +28,26 @@
   def print_list(list)
     puts "here's your grocery list:"
     list.each {|item,quantity| puts "*#{item}:#{quantity}"}
+=======
+  def add_item(g_l, str_item, num)
+    g_l[str_item] = num 
+    g_l
+  end
+
+  def remove_item(g_l, str_item_remove)
+    g_l.delete(str_item_remove)
+    g_l
+  end
+
+  def update_quantity(g_l,str_item,new_num)
+    g_l[str_item] = new_num
+    g_l
+  end
+
+  def print_list(g_l)
+    puts "here's your grocery list:"
+    g_l.each {|item,quantity| puts "*#{item}:#{quantity}"}
+>>>>>>> 50bc3144704857729ec595682d1258de7ce3d614
   end
 
 
@@ -88,4 +109,13 @@ p my_list = print_list(my_list)
 
 #You can pass all kinds of things between methods when you use variables, even other methods (says the text at the top of this exercise). This time I passed my hash via a variable, a string, and an integer. 
 
+<<<<<<< HEAD
 #Because I was able to solo pair, I now am really understanding how to make methods "speak" to each other. I went through making "bad code" become good code, and Daniel helped me see the *logical* progression of how this works. I liked being able to think through things by making mistakes and seeing my errors, as well as learning more DRY ways to do things. I'm going to retry this exercise on my own for practice / a refresher before the RUBY test, b/c I found this very helpful. In my last pair, we made an EXTREMLY complicated program that really confused me. This time, I feel MUCH better about the concepts I've learned ( hashes, arrays, how to pass info, etc.)
+=======
+#Because I was able to solo pair, I now am really understanding how to make methods "speak" to each other. I went through making "bad code" become good code, and Daniel helped me see the *logical* progression of how this works. I liked being able to think through things by making mistakes and seeing my errors, as well as learning more DRY ways to do things. I'm going to retry this exercise on my own for practice / a refresher before the RUBY test, b/c I found this very helpful. In my last pair, we made an EXTREMLY complicated program that really confused me. This time, I feel MUCH better about the concepts I've learned ( hashes, arrays, how to pass info, etc.)
+
+
+
+
+
+>>>>>>> 50bc3144704857729ec595682d1258de7ce3d614
