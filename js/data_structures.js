@@ -1,24 +1,18 @@
-//7.2 Pairing SchmuhlFace & Zaslam72
+//7.2 Pairing SchmuhlFace & AlexCan(didn't respond to final time)
 
 
 // // array of colors
-var colors = ["purple", "blue", "green", "white"];
+var colors = ["purple", "blue", "green", "rainbow"];
 
 //array of four name
 
-var names = ["Snowball", "Unicorn", "Kitten", "Brownie"];
+var names = ["Snowball", "Unicorn", "Kitten", "Max"];
 
 // add another color
 colors.push("pink");
 
 // add another name
 names.push("Ed");
-
-// declare:
-
-// add code that will use your two arrays to create an object. 
-
-// The keys of your object should be horse names, and the values should be colors. Your solution should be something that would work for any number of colors/horses, as long as the two arrays are the same length. 
 
 //pseudocoding
 
@@ -38,6 +32,7 @@ object value
 var horse = {names: 'Snowball', colors: 'purple'};
 console.log(horse);
 
+////////
 
 function Car(type, color) {
   console.log("Our sweet ride:", this);
