@@ -27,12 +27,9 @@ if (colors.length == names.length) {
   }
 
 }
+      console.log(horse);
 
-object value
-var horse = {names: 'Snowball', colors: 'purple'};
-console.log(horse);
-
-////////
+////////CONSTRUCTOR:
 
 function Car(type, color) {
   console.log("Our sweet ride:", this);
