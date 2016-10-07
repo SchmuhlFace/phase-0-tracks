@@ -1,4 +1,4 @@
-//7.2 Pairing SchmuhlFace & AlexCan(didn't respond to final time)
+//7.2 Pairing SchmuhlFace & AlexCan(didn't respond to final time and I had to do this on my own)
 
 
 // // array of colors
@@ -55,4 +55,17 @@ carTwo.vroom();
 
 
 
+// Research on your own
+
+// If you wanted to loop through the keys and values of an object, how would you do that? (There are a few ways to accomplish this, and some gotchas that can happen depending on your approach.)
+
+// This is how you loop through keys / values in JavaS:
+
+// for (var i = 0; i < kittens.length; i++) {
+//   console.log(kittens[i]);
+// }
+
+// Are there advantages to using constructor functions to create objects? Disadvantages? 
+
+// Constructors have Global values, which is useful and dangerous b/c it means you can access it easily but a person can also change it easily, so it's a sort of paradox! 
 
