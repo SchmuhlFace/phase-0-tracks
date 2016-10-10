@@ -41,9 +41,9 @@ class Santa
   end
 
   def get_mad_at(bad_reindeer)
-    @reindeer_ranking.delete(bad_reindeer)
     puts "Hey #{bad_reindeer}! Bad, #{bad_reindeer}; you shouldn't have eaten my cookie! To the end of the line!"
     @reindeer_ranking.push(bad_reindeer)
+    @reindeer_ranking.delete(bad_reindeer)
   end  
 
 
