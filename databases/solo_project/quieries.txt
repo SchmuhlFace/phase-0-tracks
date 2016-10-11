@@ -1,0 +1,46 @@
+select * from fruit;
+
+1|peaches|300| true|1
+2|apples|45|false|2
+3|tomatoes|50|false|2
+
+
+update fruit set quantity=500 where name="tomatoes";
+select * from fruit;
+
+1|peaches|300| true|1
+2|apples|45|false|2
+3|tomatoes|500|false|2
+
+select * from fruit, storage where fruit.storage_id = storage.id;
+
+1|peaches|300| true|1|1|cold storage
+2|apples|45|false|2|2|barn
+3|tomatoes|500|false|2|2|barn
+
+
+select fruit.name, storage.name from fruit join storage on fruit.storage_id = storage.id;
+peaches|cold storage
+apples|barn
+tomatoes|barn
+
+delete from fruit where name="tomatoes";
+select * from fruit;
+
+1|peaches|300| true|1
+2|apples|45|false|2
+
+#Release 3#
+
+There sure are a lot of different joins! left, right, full outer, inner, to name a few. You can definitely apply different conditions to a join. I found some great resources and have book marked them. I like the visuals of circles too, which helps me see what's being shared (looks like a venn diagram and there are lots of them!).
+
+select fruit.name from fruit where fruit.name not in (select name from storage);
+
+peaches
+apples
+
+
+select names from storage.name right join fruit.name on name.key = name.key where name is null;
+Error: RIGHT and FULL OUTER JOINs are not currently supported
+
+
