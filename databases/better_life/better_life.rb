@@ -15,12 +15,12 @@ db = SQLite3::Database.new("better_life.db")
 # #fancy string delimiters: string in ruby that will get passed through a method as a string
 
 create_table_cmd = <<-SQL
-  CREATE TABLE better_life(
+  CREATE TABLE IF NOT EXISTS better_life(
     id INTEGER PRIMARY KEY,
-    day VARCHAR(255),
     mindful_meditation VARCHAR(255),
-    meditation_location VARCHAR(255),
-    mantra VARCHAR(255)
+    city VARCHAR(255),
+    state VARCHAR(255),
+    word VARCHAR(255)
     )
 SQL
 
@@ -28,17 +28,25 @@ SQL
 
 db.execute(create_table_cmd)
 
-# # create a method to insert info into each row while using ? for placeholder
+# add a test better life
 
-# def log_day(db,day,mindful_meditation, meditation_location,mantra)
-#   db.execute("INSERT INTO better_life (day, mindful_meditation,  meditation_location,mantra) VALUES (?, ?, ?, ?)", [day, mindful_meditation,  meditation_location,mantra])
-# end 
 
-# mindful_meditation = ["Guided", "Pranayama", "Open eyed", "Walking", "Dancing",]
+def create_mindful_day(db, mindful_meditation, city,state, word)
+  db.execute("INSERT INTO better_life (mindful_meditation, city, state, word) VALUES (?, ?, ?, ?)", [mindful_meditation, city, state, word])
+end 
 
-# 50.times do
-#   log_day(db, Faker: :day, mindful_meditation.sample, Faker: :city.meditation_location, Faker: :catchPhrase.mantra )
-# end
+mindful_meditation = ["Guided", "Pranayama", "Open eyed", "Walking", "Dancing",]
+
+31.times do
+  create_mindful_day(db, mindful_meditation.sample, Faker::Address.city, Faker::Address.state, Faker::Hipster.word )
+end
+
+
+
+
+
+
+
 
 
 # # User Interface
