@@ -5,7 +5,8 @@
 require 'sqlite3'
 require 'faker'
 require 'rainbow'
-require 'rainbow/ext/string'
+
+
 
 # create SQLite3 database / This also can take a block if i want it too
 #db = stores the database into a variable
@@ -42,16 +43,17 @@ mindful_meditation = ["Guided", "Pranayama", "Open-eyed", "Walking", "Dancing",]
 
 # User Interface
 
-puts Rainbow("Hello and welcome to *** WELL BEING ***, your app to a more mindful life").aliceblue
+
+puts Rainbow("Hello and welcome to *** WELL BEING ***, your app to a more mindful life").underline.bright
 puts "Please enter your name"
 user_input = gets.chomp
 puts "Hello #{user_input}! We know planning your meditations can be difficult. That's why we're happy to generate them for you! If you're ready to receive your first suggested meditation instructions, please type *I'm ready*. If you're not ready, please type *I'm not ready*"
   user_status = gets.chomp
    
-   if user_status == "I'm not ready"
+    if user_status == "I'm not ready"
     puts "That's okay. Come back when you're ready to be a Well Being! NAMASTE."
 
-    else user_status == "I'm ready"
+    elsif user_status == "I'm ready"
       puts "Wonderful! Please enter the number of meditations you'd like."
       med_number = gets.chomp.to_i
       puts "Thank you! We're preparing your request of #{med_number} meditations, #{user_input}. Take a deep breath!"
@@ -72,7 +74,7 @@ puts "Hello #{user_input}! We know planning your meditations can be difficult. T
 
 
 
-
+# UPDATE rabbits SET age=4 WHERE name="Queen Bey";
 
 
 
