@@ -4,12 +4,12 @@
 
 require 'sqlite3'
 require 'faker'
-require 'rainbow'
+require 'Rainbow'
 
 # create SQLite3 database / This also can take a block if i want it too
 #db = stores the database into a variable
 
-db = SqLite3::Database.new("better_life.db")
+db = SQLite3::Database.new("better_life.db")
 # db.results_as_hash = true
 
 # #fancy string delimiters
