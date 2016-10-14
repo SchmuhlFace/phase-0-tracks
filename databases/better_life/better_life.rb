@@ -10,7 +10,7 @@ require 'Rainbow'
 #db = stores the database into a variable
 
 db = SQLite3::Database.new("better_life.db")
-# db.results_as_hash = true
+db.results_as_hash = true
 
 # #fancy string delimiters: string in ruby that will get passed through a method as a string
 
@@ -42,7 +42,11 @@ mindful_meditation = ["Guided", "Pranayama", "Open eyed", "Walking", "Dancing",]
 end
 
 
-
+# Explore ORM by retreiving data:
+better_life = db.execute("SELECT * from better_life")
+better_life.each do |suggestion|
+  puts "Your mindful meditation of #{suggestion['mindful_meditation']} would be best practiced in #{suggestion['city']} , #{suggestion['state']} while repeating the mantra *** #{suggestion['word']} ***."
+end
 
 
 
