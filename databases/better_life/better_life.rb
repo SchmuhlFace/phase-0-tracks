@@ -12,21 +12,21 @@ require 'Rainbow'
 db = SQLite3::Database.new("better_life.db")
 # db.results_as_hash = true
 
-# #fancy string delimiters
+# #fancy string delimiters: string in ruby that will get passed through a method as a string
 
-# create_table_cmd = <<-SQL
-#   CREATE TABLE IF NOT EXISTS better_life(
-#     id INTEGER PRIMARY KEY,
-#     day VARCHAR(255),
-#     mindful_meditation VARCHAR(255),
-#     meditation_location VARCHAR(255),
-#     mantra VARCHAR(255)
-#     )
-# SQL
+create_table_cmd = <<-SQL
+  CREATE TABLE better_life(
+    id INTEGER PRIMARY KEY,
+    day VARCHAR(255),
+    mindful_meditation VARCHAR(255),
+    meditation_location VARCHAR(255),
+    mantra VARCHAR(255)
+    )
+SQL
 
-# # call method to create this table
+# # call method to create this table passs string into the execute method as an argument
 
-# db.execute(create_table_cmd)
+db.execute(create_table_cmd)
 
 # # create a method to insert info into each row while using ? for placeholder
 
