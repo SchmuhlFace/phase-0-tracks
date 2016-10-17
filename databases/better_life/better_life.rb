@@ -60,21 +60,21 @@ puts Rainbow("Hello #{user_input}! We know planning your meditations can be diff
       puts Rainbow("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*").blink.blue
         med_number.times do
         create_mindful_day(db, mindful_meditation.sample, Faker::Address.city, Faker::Address.state, Faker::Hipster.word )
-        end
+    end
 
-            better_life = db.execute("SELECT * from better_life")
-            better_life.each do |suggestion|
-              puts Rainbow("Your mindful meditation of #{suggestion['mindful_meditation']} would be best practiced in #{suggestion['city']} , #{suggestion['state']} while repeating the mantra *** #{suggestion['word']} ***.").magenta
-              puts Rainbow("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*").blink.blue
-            end
-            puts Rainbow("Thank you for using WELL BEING! NAMASTE").red
-          end
-
-
+    better_life = db.execute("SELECT * from better_life")
+    better_life.each do |suggestion|
+      puts Rainbow("Your mindful meditation of #{suggestion['mindful_meditation']} would be best practiced in #{suggestion['city']} , #{suggestion['state']} while repeating the mantra *** #{suggestion['word']} ***.").magenta
+      puts Rainbow("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*").blink.blue
+      end
+      puts Rainbow("Thank you for using WELL BEING! NAMASTE").red
+      end
 
 
 
-# UPDATE rabbits SET age=4 WHERE name="Queen Bey";
+
+
+
 
 
 
