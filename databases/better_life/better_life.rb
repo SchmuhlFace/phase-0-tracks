@@ -74,7 +74,7 @@ puts Rainbow("Hello #{user_input}! We know planning your meditations can be diff
 
 
 
-# UPDATE rabbits SET age=4 WHERE name="Queen Bey";
+
 
 
 
