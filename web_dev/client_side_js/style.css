@@ -1,0 +1,80 @@
+html {
+  background:pink
+}
+
+#face {
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 80%;
+
+}
+
+h1,h2 .header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+    width: 100%;  
+    background-color: white;
+    padding: 20px;  
+ 
+}
+
+#silly_table {
+    text-align: center;
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+    margin-bottom: 2%;
+    background-image: url(images/dots.jpg)
+
+}
+
+#links {
+    padding:20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-family: "Helvetica", sans-serif;
+    font-size: 15px;
+    font-style: bold;
+    border: 25px solid white;
+}
+
+
+
+ul > li {
+    background-color: yellow;
+
+}
+
+a:link {
+    background-color: white;
+    color: black;
+    padding: 8px 10px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+ a:visited {
+    background-color: white;
+    color: green;
+    padding: 8px 10px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: red;
+}
+
+.footer {
+    text-align: center;
+    padding:30px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
