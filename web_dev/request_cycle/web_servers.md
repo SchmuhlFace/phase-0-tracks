@@ -1,5 +1,6 @@
 What are some of the key design philosophies of the Linux operating system?
 
+Linux is a open source software that is allowed to be downloaded, modified, and redistributed for free! 
 
 In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
 
