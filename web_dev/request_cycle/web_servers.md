@@ -12,3 +12,4 @@ Optional bonus question: Why is it considered a bad idea to run programs as the 
 - all applications are running with root privileges which means a virus or outsider can easily  destroy your system because when you're logged in as root, you have access everywhere.
 
 
+* trying to push to GH
