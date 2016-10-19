@@ -13,7 +13,13 @@ While doing the above, I will also be sure to:
 - share resources via slack and add the jquery channel
 - Write a question to fellow classmates to see if they have any resources via slack.
 
-Then I will Practice:
+Simultaneously, I will Practice:
 
 -Make a very simple Jquery exercise / site for myself to practice
 - If more time is available, do another one!
+
+INGENERAL
+
+- I will take breaks
+- I will get up and brink water / visit the bathroom
+- I may do breathing exercises ( pranayama) on breaks
