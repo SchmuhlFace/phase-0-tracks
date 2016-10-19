@@ -23,3 +23,12 @@ INGENERAL
 - I will take breaks
 - I will get up and brink water / visit the bathroom
 - I may do breathing exercises ( pranayama) on breaks
+
+
+NOTES
+
+$(selector).action()
+
+$(document).ready(function(){
+   // jQuery methods go here...
+});
