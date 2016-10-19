@@ -9,7 +9,7 @@
 require_relative 'state_data'
 
 class VirusPredictor
-# each time we create a new instance of the class, initializae will run, it takes state_of_origin, population_density, population
+# each time we create a new instance of the class, initialize will run, it takes state_of_origin, population_density, population
 # three parameters, it returns these three parameters. 
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
@@ -27,22 +27,19 @@ class VirusPredictor
   private
 # it takes population_density, population, state parameters, and it calculates the number_of_deaths depending on the 
 #ppopulation_density, it prints out the number of deaths of a state at the end. 
-  def predicted_deaths(population_density, population)
+ def predicted_deaths(population_density, population)
     # predicted deaths is solely based on population density
-    factor = 0
-    number_of_deaths = (@population * factor).floor
-
-    if @population_density>=200
-      factor = 0.4
-    elsif @population_density>=150
-      factor = 0.3
-    elsif @population_density>=100
-      factor = 0.2
-    elsif @population_density>=50
-      factor = 0.1 
-    else 
-      factor = 0.05 
-    end 
+    if @population_density >= 200
+      number_of_deaths = (@population * 0.4).floor
+    elsif @population_density >= 150
+      number_of_deaths = (@population * 0.3).floor
+    elsif @population_density >= 100
+      number_of_deaths = (@population * 0.2).floor
+    elsif @population_density >= 50
+      number_of_deaths = (@population * 0.1).floor
+    else
+      number_of_deaths = (@population * 0.05).floor
+    end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
