@@ -18,6 +18,7 @@ get '/students/new' do
 end
 
 get '/students/search' do
+  @search = db.execute("SELECT * FROM students WHERE name= ? AND campus= ? AND age= ?", [params['name'], params['campus'], params['age'].to_i])
   erb :search
 end
 
@@ -28,9 +29,9 @@ post '/students' do
   redirect '/'
 end
 
-get '/students/search' do
-  @search = db.execute("SELECT * FROM students WHERE name= ? AND campus= ? AND age= ?", [params['name'], params['campus'], params['age'].to_i])
-end
+# get '/students/search' do
+#   @search = db.execute("SELECT * FROM students WHERE name= ? AND campus= ? AND age= ?", [params['name'], params['campus'], params['age'].to_i])
+# end
 
 
 # add static resources
