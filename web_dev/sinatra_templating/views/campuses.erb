@@ -8,14 +8,14 @@
     <p>
       <% list = "" %>
       <% @students.each do |student| %>
-        <% if !list.include? "#{student['campus']}" %> 
-          <% list << "#{student['campus']}\n" %> 
+        <% if !list.include? "#{student['campus']}" %>  
+          <% list << "#{student['campus']} " %> 
         <% end %>
-        <%= list %>
       <% end %>
+      <%= list %> 
     </p>
-    <form>
-      
+    <form action="/students/campuses" method="POST">
+      <input type="text" name="campus" placeholder="Campus">
     </form>
 
 </body>
