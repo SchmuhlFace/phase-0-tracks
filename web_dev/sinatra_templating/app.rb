@@ -17,6 +17,11 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/students/search' do
+  @search = db.execute("SELECT * FROM students WHERE name= ? AND campus= ? AND age= ?", [params['name'], params['campus'], params['age'].to_i])
+  erb :search
+end
+
 # create new students via
 # a form
 post '/students' do
@@ -24,4 +29,13 @@ post '/students' do
   redirect '/'
 end
 
-# add static resources
+get '/students/campuses' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :campuses
+end
+
+post '/campuses' do
+  db.execute("INSERT INTO campuses (campus) VALUES (?)", [params['campus']])
+  redirect '/students/campuses'
+end
+
