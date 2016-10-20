@@ -37,6 +37,10 @@ get '/students/campuses' do
   erb :campuses
 end
 
+post '/students/campus' do
+  campuses.execute("INSERT INTO campuses (campus) VALUES (?)", [params['campus']])
+end
+
 # get '/students/search' do
 #   @search = db.execute("SELECT * FROM students WHERE name= ? AND campus= ? AND age= ?", [params['name'], params['campus'], params['age'].to_i])
 # end
