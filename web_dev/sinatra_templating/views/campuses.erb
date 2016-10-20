@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campuses</title>
+</head>
+<body>
+  <h1>Student Campus List</h1>
+    <p>
+      <% list = "" %>
+      <% @students.each do |student| %>
+        <% if !list.include? "#{student['campus']}" %> 
+          <% list << "#{student['campus']}\n" %> 
+        <% end %>
+        <%= list %>
+      <% end %>
+    </p>
+    <form>
+      
+    </form>
+
+</body>
+</html>
