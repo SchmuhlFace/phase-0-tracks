@@ -1,0 +1,34 @@
+
+body {
+  font-family: 'Bungee Inline', cursive;
+}
+
+span {
+  color: red;
+  font-style: bold;
+}
+
+main p {
+  line-height: 0.2;
+}
+
+
+footer p {
+  text-align: center;
+  background-color: lightblue;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 10px;
+}
+
+#hint {
+  text-align: center;
+
+}
+
+#poem {
+  text-align: center;
+}
+
