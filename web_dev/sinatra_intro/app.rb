@@ -1,9 +1,9 @@
 # require gems
 require 'sinatra'
-# require 'sqlite3'
+require 'sqlite3'
 
-# db = SQLite3::Database.new("students.db")
-# # db.results_as_hash = true
+db = SQLite3::Database.new("students.db")
+db.results_as_hash = true
 
 # write a basic GET route
 # add a query parameter
@@ -76,3 +76,9 @@ get '/add/:a/:b' do
     "#{a} + #{b} = #{sum.to_s}"
 end
 
+# Optional bonus: Make a route that allows the user to search the database in some way -- maybe for students who have a certain first name, or some other attribute. If you like, you can simply modify the home page to take a query parameter, and filter the students displayed if a query parameter is present.
+
+get '/students/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  student.to_s
+end
