@@ -19,14 +19,6 @@ footer p {
   font-size: 10px;
 }
 
-#click {
-  text-align: center;
-  padding: 10px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  font-size: 20px;
-}
 
 #poem {
   text-align: right;
@@ -39,4 +31,13 @@ footer p {
   height: 110%;
 }
 
+#hoverplz {
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
+
+}
 

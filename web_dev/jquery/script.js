@@ -1,8 +1,8 @@
 
 $(function(){
-    $("#click").click(function(){
+    $("#hoverplz").hover(function(){
         $("#peach").animate({
-            height: 'toggle'
-        });
+            left: '900px'
+        }, "slow");
     });
 });
