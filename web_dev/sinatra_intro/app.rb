@@ -1,13 +1,14 @@
 # require gems
 require 'sinatra'
-require 'sqlite3'
+# require 'sqlite3'
 
-db = SQLite3::Database.new("students.db")
-db.results_as_hash = true
+# db = SQLite3::Database.new("students.db")
+# # db.results_as_hash = true
 
 # write a basic GET route
 # add a query parameter
 # GET /
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
@@ -44,3 +45,23 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+### RELEASE WORK!!!!! ###
+
+#Contact route that displays an address and b/c i am fancy also a name.
+get '/contact/:person/:address' do
+  "#{params[:person]} lives at #{params[:address]}."
+end
+
+
+# A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job, [person's name]!". If the query parameter is not present, the route simply says "Good job!"
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job."
+  end
+end
+
+
