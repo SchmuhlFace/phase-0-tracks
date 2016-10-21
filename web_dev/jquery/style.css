@@ -3,19 +3,15 @@ body {
   font-family: 'Bungee Inline', cursive;
 }
 
-span {
-  color: red;
-  font-style: bold;
-}
 
 main p {
-  line-height: 0.2;
+  line-height: -0.2;
 }
 
 
 footer p {
   text-align: center;
-  background-color: lightblue;
+  background-color: pink;
   padding: 10px;
   position: fixed;
   bottom: 0;
@@ -23,12 +19,24 @@ footer p {
   font-size: 10px;
 }
 
-#hint {
+#click {
   text-align: center;
-
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 20px;
 }
 
 #poem {
-  text-align: center;
+  text-align: right;
+  font-size: 20px;
 }
+
+#peach {
+  position: fixed;
+  width: 110%;
+  height: 110%;
+}
+
 
