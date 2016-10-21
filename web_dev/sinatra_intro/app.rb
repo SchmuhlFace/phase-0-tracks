@@ -8,6 +8,7 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
+
 get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
@@ -42,5 +43,42 @@ end
 
 get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
+  student.to_s
+end
+
+### RELEASE WORK!!!!! ###
+
+#Contact route that displays an address and b/c i am fancy also a name.
+get '/contact/:person/:address' do
+  "#{params[:person]} lives at #{params[:address]}."
+end
+
+get '/address' do
+  "327 Rdigeway,<br> St.Joseph, MI<br>"
+end
+
+# A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job, [person's name]!". If the query parameter is not present, the route simply says "Good job!"
+get '/great_job' do
+  name = params[:name]
+  if name
+    "Good job, #{name}!"
+  else
+    "Good job."
+  end
+end
+
+# A route that uses route parameters to add two numbers and respond with the result. The data types are tricky here -- when will the data need to be (or arrive as) a string?
+
+get '/add/:a/:b' do
+    a = params[:a].to_i
+    b = params[:b].to_i
+    sum = a + b
+    "#{a} + #{b} = #{sum.to_s}"
+end
+
+# Optional bonus: Make a route that allows the user to search the database in some way -- maybe for students who have a certain first name, or some other attribute. If you like, you can simply modify the home page to take a query parameter, and filter the students displayed if a query parameter is present.
+
+get '/students/:campus' do
+  student = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
   student.to_s
 end
